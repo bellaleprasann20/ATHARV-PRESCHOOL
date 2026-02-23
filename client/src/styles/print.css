@@ -1,0 +1,50 @@
+@media print {
+  /* Hide UI elements that shouldn't be on paper */
+  nav, 
+  aside, 
+  button, 
+  footer, 
+  .no-print,
+  .toast-container {
+    display: none !important;
+  }
+
+  /* Reset layout for paper */
+  body {
+    background: white !important;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .print-container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Force borders to show in some browsers */
+  .receipt-table th, 
+  .receipt-table td {
+    border: 1px solid #e2e8f0 !important;
+    padding: 12px !important;
+  }
+
+  /* Typography for printing */
+  h1, h2, h3 {
+    color: black !important;
+  }
+
+  /* Page break rules */
+  .page-break {
+    page-break-before: always;
+  }
+
+  /* Ensure the receipt fits on A4 */
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
+}
