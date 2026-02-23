@@ -23,7 +23,7 @@ const app = express();
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? ['https://atharvpreschool.in', 'https://www.atharvpreschool.in']
+    ? ['https://atharvpreschool.in', 'https://www.atharvpreschool.in','https://atharv-preschool.vercel.app']
     : ['http://localhost:5173', 'http://localhost:3000'],
   credentials: true,
 }));
